@@ -1,0 +1,20 @@
+version: "3"
+services:
+  dnsmasq:
+    restart: always
+    depends_on:
+      - nginx-proxy
+  nginx-proxy:
+    restart: always
+  www-whoami:
+    restart: always
+    depends_on:
+      - nginx-proxy
+  www-dangxproject:
+    restart: always
+    depends_on:
+      - nginx-proxy
+  www-api:
+    restart: always
+    depends_on:
+      - nginx-proxy

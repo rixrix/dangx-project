@@ -1,0 +1,16 @@
+version: "3"
+services:
+    www-api:
+        container_name: dangx-www-api
+        image: dangx/nodejs
+        build: ./www-api
+        expose:
+            - "80"
+        ports:
+            - "3001:80"
+        environment:
+            VIRTUAL_HOST: api.dangxproject.dev
+networks:
+  default:
+    external:
+      name: nginx-proxy

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  dnsmasq:
+    container_name: dangx-dnsmasq
+    image: andyshinn/dnsmasq:latest
+    ports:
+      - "53:53"
+      - "53:53/udp"
+    cap_add:
+      - NET_ADMIN
+    command:
+      - --address=/dev/127.0.0.1
