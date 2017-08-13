@@ -1,6 +1,6 @@
 # Dangx Project
 
-
+![Simple Diagram](docs/diagram.png)
 
 # Services
 
