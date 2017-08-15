@@ -2,9 +2,8 @@
 
 docker-compose  \
     -f docker-compose.yml \
-    -f docker-compose.dnsmasq.yml \
-    -f docker-compose.nginx-proxy.yml \
-    -f docker-compose.www-whoami.yml \
-    -f docker-compose.www-dangxproject.yml \
-    -f docker-compose.www-api.yml \
+    -f ./docker/dnsmasq/docker-compose.yml \
+    -f ./docker/nginx-proxy/docker-compose.yml \
+    -f ./docker/www-public/docker-compose.yml \
+    -f ./docker/www-api/docker-compose.yml \
     down

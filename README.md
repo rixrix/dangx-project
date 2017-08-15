@@ -2,9 +2,7 @@
 
 ![Simple Diagram](docs/diagram.png)
 
-Following on the success of the "All-In-One" [Dangx](https://github.com/rixrix/dangx) project which got 8 views and 1 unique visitors from the time of this writing (13/Aug/2017) - 20 days ago, I've broken it down into multiple docker-compose/Dockerfile files.
-
-This is an attempt to build a microservices architecture: API driven, lightweight on infrastructure (Alpine Linux), loosely coupled services. I had this vision in 2016 however it just got materialised recently along with the help of this blogs [1], [2]
+This is an attempt to build a microservices architecture: API driven, lightweight on infrastructure (Alpine Linux), loosely coupled services. See ideas from [1], [2]
 
 # Tech Stack
 
@@ -25,6 +23,20 @@ This is an attempt to build a microservices architecture: API driven, lightweigh
 * 4. Restart the containers
   * `./scripts/docker-compose-restart.sh`
 
+# Folder Structure
+
+```
+./
+    docker/
+        +- all Docker related files
+    scipts/
+        +- compose scripts, new network, etc
+    www-api/
+        +- API source code
+    www-public/
+        +- Landing/static page
+```
+
 # Todo
 
 The list below requires a massive amount of time but definitely doable.
@@ -38,9 +50,6 @@ The list below requires a massive amount of time but definitely doable.
 
 # Services
 
-* www-whoami
-  * URL: http://whoami.dev
-  * Port: 8000
 * www-dangxproject
   * Project landing page, mostly static assets
   * Info

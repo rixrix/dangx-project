@@ -1,0 +1,16 @@
+version: "3"
+services:
+  www-public:
+    container_name: dangx-www-public
+    image: nginx
+    expose:
+      - "80"
+    ports:
+      - "3000:80"
+    environment:
+      - VIRTUAL_HOST=dangxproject.dev
+    volumes:
+      # @XXX: weird or Docker's feature ?
+      #       "./www-public" is 2 directories away yet it resolves in "./"
+      #       probably due to the main "docker-compose.yml" as its relative directory
+      - ./www-public:/usr/share/nginx/html
